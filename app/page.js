@@ -1,6 +1,6 @@
 "use client"
 import { useState, useEffect } from "react";
-
+import gradientMask from "./components/gradientMask";
 function generateRandomString(length) {
   return Array.from(
     { length },
@@ -16,7 +16,7 @@ export default function Home() {
   useEffect(() => {
     const randomString = generateRandomString(10000); // Now this runs only on client side
     setString(randomString);
-  }, []); // Empty dependency array to run only once on mount
+  }, []); 
 
 
   return (

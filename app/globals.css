@@ -2,3 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+.mask {
+  /* -webkit-mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0) 70%); */
+  mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0) 70%);
+}
+/* // style={{
+    //   maskImage: "radial-gradient(circle at center, rgba(0,0,0,0.7) 30%, rgba(0,0,0,0) 70%)",
+    //   WebkitMaskImage: "radial-gradient(circle at center, rgba(0,0,0,0.7) 30%, rgba(0,0,0,0) 70%)",
+    // }} */
+
+.gradient-overlay::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.5) 0%, rgba(0, 0, 0, 0) 70%);
+  pointer-events: none;
+}
+.gradient-overlay {
+  position: relative;
+}

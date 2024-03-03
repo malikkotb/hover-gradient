@@ -10,7 +10,6 @@ function generateRandomString(length) {
 
 export default function Home() {
   
-
   const [string, setString] = useState(""); // Initialize with empty string
 
   useEffect(() => {
@@ -21,12 +20,13 @@ export default function Home() {
 
   return (
     <main className="bg-black flex justify-center items-center w-full h-screen">
-      <div className="h-[70vh] w-[40vw] text-white text-sm rounded-md"
-      style={{
-        maskImage: 'radial-gradient(circle at center, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 70%)',
-        WebkitMaskImage: 'radial-gradient(circle at center, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 70%)'
-      }}>
-        <p onMouseMove={() => setString(generateRandomString(10000))} className="w-full h-full whitespace-pre-wrap break-words overflow-hidden">{string}</p>
+      <div className="h-[70vh] w-[50vw] text-white text-sm rounded-lg overflow-hidden"
+      // style={{
+      //   maskImage: 'radial-gradient(circle at center, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 70%)',
+      //   WebkitMaskImage: 'radial-gradient(circle at center, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 70%)'
+      // }}
+      >
+        <p onMouseMove={() => setString(generateRandomString(10000))} className="relative top-[-5%] whitespace-pre-wrap break-words">{string}</p>
       </div>
     </main>
   );

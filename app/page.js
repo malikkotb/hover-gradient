@@ -17,6 +17,7 @@ export default function Home() {
 
   return (
     <main className="bg-black flex justify-center items-center w-full h-screen">
+      {/* TODO: lay that gradient div on top of the text */}
       <div
         className="h-[70vh] w-[50vw] text-sm rounded-lg overflow-hidden
       "
@@ -36,12 +37,12 @@ export default function Home() {
           WebkitMaskImage: "radial-gradient(circle at center, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 70%)",
         }}
       >
-        {/* <p
+        <p
           onMouseMove={() => setString(generateRandomString(10000))}
           className="relative text-white top-[-5%] whitespace-pre-wrap break-words"
         >
           {string}
-        </p> */}
+        </p>
       </div>
     </main>
   );
